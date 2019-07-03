@@ -1,0 +1,13 @@
+robbyrussell/oh-my-zsh path:plugins/aws
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/npm
+robbyrussell/oh-my-zsh path:plugins/pip
+
+Tarrasch/zsh-bd
+
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions branch:develop
+zsh-users/zsh-syntax-highlighting
+
+mafredri/zsh-async
+sindresorhus/pure
