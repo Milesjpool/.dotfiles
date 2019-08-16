@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
+
+alias rezsh='source ~/.zshrc'
+alias zshrc='$EDITOR ~/.zshrc'
+alias x='read -q -t 5 -s "?Exit? " && exit'
 
 # profiler
 #zmodload zsh/zprof
@@ -12,10 +16,10 @@ autoload -Uz compinit
 compinit
 
 ### sources
-source ~/.zsh_plugins
 source ~/.sh_aliases
 source ~/.sh_functions
 source ~/.sh_settings
+source ~/.zsh_plugins
 
 ### history
 HISTFILE=~/.zsh_history
