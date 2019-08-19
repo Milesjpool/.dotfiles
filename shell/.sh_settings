@@ -1,2 +1,4 @@
+[ -f $HOME/.reformrc] && source $HOME/.reformrc
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
