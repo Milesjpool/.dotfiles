@@ -1,3 +1,6 @@
 function mkcd() { mkdir -p "$1" && cd "$1"; }
 
 function cdto() { cd `which "$1"`/..; }
+
+function +x() { chmod u+x $1; }
+

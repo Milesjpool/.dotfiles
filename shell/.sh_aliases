@@ -2,7 +2,7 @@ alias ..='cd ..'
 alias ...='cd ..\..'
 alias ll='ls -al'
 alias code='cd ~/Documents/Code'
-alias dotfiles='cd ~/.dotfiles'
+alias dotfiles='pushd ~/.dotfiles'
 
 alias gcm='git commit -m'
 alias gap='git add -p'

@@ -64,7 +64,7 @@ nvm() {
   fi
 }
 
-command -v fnm >/dev/null 2>&1 && eval"$(pyenv init -)"
+command -v fnm >/dev/null 2>&1 && eval "$(pyenv init -)"
 command -v fnm >/dev/null 2>&1 && eval "$(fnm env --multi)"
 
 # profiler
