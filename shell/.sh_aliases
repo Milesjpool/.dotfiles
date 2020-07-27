@@ -1,14 +1,32 @@
 alias ..='cd ..'
 alias ...='cd ..\..'
 alias ll='ls -al'
-alias code='cd ~/Documents/Code'
+alias :q='exit'
+
+alias please='sudo'
+
+CODE_DIR="$HOME/Documents/Code"
+for proj_path in $CODE_DIR/*/; do
+  proj="$(basename "$proj_path")";
+  alias "code/$proj"="cd $CODE_DIR/$proj";
+done
+alias code='cd $CODE_DIR'
+alias gode="cd $GOPATH"
+
 alias dotfiles='pushd ~/.dotfiles'
+
+alias alpine='docker run --rm -it alpine sh'
 
 alias gcm='git commit -m'
 alias gap='git add -p'
+alias gaa='git add -A'
 alias gst='git status'
 alias gpl='git pull'
 alias gps='git push'
+alias grhh='git reset --hard HEAD'
+alias clone='code && git clone'
+
+alias kucocuco="kubectl config current-context"
 
 alias sh_aliases='$EDITOR ~/.sh_aliases'
 alias sh_aliases.private='$EDITOR ~/.sh_aliases.private'

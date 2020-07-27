@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+set -o emacs
+
 alias rezsh='source ~/.zshrc'
 alias zshrc='$EDITOR ~/.zshrc'
 alias x='read -q -t 5 -s "?Exit? " && exit'
@@ -64,8 +66,10 @@ nvm() {
   fi
 }
 
-command -v fnm >/dev/null 2>&1 && eval "$(pyenv init -)"
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 command -v fnm >/dev/null 2>&1 && eval "$(fnm env --multi)"
 
 # profiler
 #zprof
+# fnm
+eval "$(fnm env --multi)"

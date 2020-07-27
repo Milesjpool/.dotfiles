@@ -2,5 +2,24 @@ function mkcd() { mkdir -p "$1" && cd "$1"; }
 
 function cdto() { cd `which "$1"`/..; }
 
-function +x() { chmod u+x $1; }
+function +x() { chmod +x $1; }
 
+function csc() { $EDITOR $(which $1) }
+
+function glc() {
+  (
+  code;
+  for d in */.git; do
+    dir=$( dirname "$d" )
+    pushd "$dir" > /dev/null
+    if [[ $(git status --porcelain) ]]; then
+      echo "$dir"
+    fi
+    popd > /dev/null
+  done
+  )
+}
+
+function fpop() { head -n1 "$1"; tail -n +2 "$1" > "$1.tmp"; mv "$1.tmp" "$1" }
+
+function o() { if [ -z "$1" ]; then open .; else open "$1";fi  }
