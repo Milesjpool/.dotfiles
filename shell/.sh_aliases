@@ -9,6 +9,7 @@ CODE_DIR="$HOME/Documents/Code"
 for proj_path in $CODE_DIR/*/; do
   proj="$(basename "$proj_path")";
   alias "code/$proj"="cd $CODE_DIR/$proj";
+  alias "vscode/$proj"="vscode $CODE_DIR/$proj";
 done
 alias code='cd $CODE_DIR'
 alias gode="cd $GOPATH"
@@ -26,6 +27,7 @@ alias gps='git push'
 alias grhh='git reset --hard HEAD'
 alias clone='code && git clone'
 
+alias k="kubectl"
 alias kucocuco="kubectl config current-context"
 
 alias sh_aliases='$EDITOR ~/.sh_aliases'

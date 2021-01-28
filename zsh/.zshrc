@@ -31,6 +31,9 @@ setopt appendhistory
 setopt share_history
 setopt incappendhistory
 
+### split words into arrays
+setopt shwordsplit
+
 ### lazy loading
 
 kubectl() {
