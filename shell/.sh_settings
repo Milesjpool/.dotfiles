@@ -8,3 +8,6 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+F="sh_settings"
+alias $F="\$EDITOR ~/.$F"
+[ -f $HOME/.$F.private ] && {source $HOME/.$F.private; alias $F.private="\$EDITOR ~/.$F.private"}

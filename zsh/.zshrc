@@ -21,7 +21,6 @@ compinit
 source ~/.sh_aliases
 source ~/.sh_functions
 source ~/.sh_settings
-source ~/.zsh_plugins
 
 ### history
 HISTFILE=~/.zsh_history

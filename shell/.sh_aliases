@@ -30,9 +30,7 @@ alias clone='code && git clone'
 alias k="kubectl"
 alias kucocuco="kubectl config current-context"
 
-alias sh_aliases='$EDITOR ~/.sh_aliases'
-alias sh_aliases.private='$EDITOR ~/.sh_aliases.private'
-alias sh_functions='$EDITOR ~/.sh_functions'
-alias sh_settings='$EDITOR ~/.sh_settings'
 
-[ -f $HOME/.sh_aliases.private ] && source $HOME/.sh_aliases.private
+F="sh_aliases"
+alias $F="\$EDITOR ~/.$F"
+[ -f $HOME/.$F.private ] && {source $HOME/.$F.private; alias $F.private="\$EDITOR ~/.$F.private"}
