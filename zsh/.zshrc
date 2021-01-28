@@ -9,7 +9,9 @@ alias x='read -q -t 5 -s "?Exit? " && exit'
 # profiler
 #zmodload zsh/zprof
 
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins
+ANTIGEN_PATH=~/.dotfiles
+source $ANTIGEN_PATH/antigen/antigen.zsh
+antigen init ~/.antigenrc
 
 ### oh-my-zsh plugins pre-reqs
 export ZSH_CACHE_DIR=~/.zsh/cache

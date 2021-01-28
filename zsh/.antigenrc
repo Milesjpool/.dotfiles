@@ -1,0 +1,14 @@
+antigen bundle robbyrussell/oh-my-zsh plugins/docker
+antigen bundle robbyrussell/oh-my-zsh plugins/npm
+antigen bundle robbyrussell/oh-my-zsh plugins/pip
+
+antigen bundle Tarrasch/zsh-bd
+
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions@develop
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
+antigen apply
