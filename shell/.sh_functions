@@ -22,9 +22,13 @@ function glc() {
 
 function fpop() { head -n1 "$1"; tail -n +2 "$1" > "$1.tmp"; mv "$1.tmp" "$1" }
 
+#function each() { f="$1"; v="$2"; shift 2; while read "$v" ; do $@; done < "$f" }
+
 function o() { if [ -z "$1" ]; then open .; else open "$1"; fi  }
 
 function pd() { if [ -z "$1" ]; then popd; else pushd "$1"; fi }
+
+function glrtp() { kubectl get pods --all-namespaces | grep -e "^a-.*Running.*d$"; }
 
 F="sh_functions"
 alias $F="\$EDITOR ~/.$F"

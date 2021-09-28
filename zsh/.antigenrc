@@ -9,6 +9,6 @@ antigen bundle zsh-users/zsh-autosuggestions@develop
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+antigen bundle sindresorhus/pure@main
 
 antigen apply
