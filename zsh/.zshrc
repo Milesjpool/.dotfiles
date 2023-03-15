@@ -28,6 +28,7 @@ compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=500
 SAVEHIST=$HISTSIZE
+setopt HIST_IGNORE_SPACE
 setopt appendhistory
 setopt share_history
 setopt incappendhistory
@@ -37,6 +38,9 @@ setopt shwordsplit
 
 ### include dotfiles with asterisk
 setopt globdots
+
+### Styling
+PURE_PROMPT_SYMBOL=👾
 
 # profiler
 #zprof

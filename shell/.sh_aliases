@@ -16,7 +16,7 @@ alias dotfiles='pushd ~/.dotfiles'
 
 # Listing
 
-alias ls='ls -p -F'
+alias ls='ls -p -F --color=auto'
 alias la='ls -a'
 alias ll='ls -lah'
 
@@ -40,7 +40,7 @@ alias vimrc="\$EDITOR ~/.vimrc"
 # Misc
 alias :e='vim'
 alias :q!='exit'
-alias :q='read -q -t 5 -s "Exit? " && exit'
+alias :q='read -q -t 5 -s "?Exit? " && exit'
 alias x=':q'
 
 alias please='sudo'
