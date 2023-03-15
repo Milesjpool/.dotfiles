@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-setopt -s dotglob
+setopt globdots
 
 ./install/unix.sh
 

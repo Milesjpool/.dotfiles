@@ -36,7 +36,7 @@ setopt incappendhistory
 setopt shwordsplit
 
 ### include dotfiles with asterisk
-setopt -s dotglob
+setopt globdots
 
 # profiler
 #zprof
