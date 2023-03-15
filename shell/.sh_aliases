@@ -1,23 +1,27 @@
+# Navigation
+
 alias ..='cd ..'
 alias ...='cd ..\..'
-alias ll='ls -al'
-alias :q='exit'
-
-alias please='sudo'
-
-CODE_DIR="$HOME/Documents/Code"
-for proj_path in $CODE_DIR/*/; do
-  proj="$(basename "$proj_path")";
-  alias "code/$proj"="cd $CODE_DIR/$proj";
-  alias "vscode/$proj"="vscode $CODE_DIR/$proj";
-done
-alias code='cd $CODE_DIR'
+alias home='cd $HOME'
+alias code='cd $CODE_PATH'
 alias gode="cd $GOPATH"
+
+for proj_path in $CODE_PATH/*/; do
+  proj="$(basename "$proj_path")";
+  alias "code/$proj"="cd $CODE_PATH/$proj";
+  alias "vscode/$proj"="vscode $CODE_PATH/$proj";
+done
 
 alias dotfiles='pushd ~/.dotfiles'
 
-alias alpine='docker run --rm -it alpine sh'
+# Listing
 
+alias ls='ls -p -F'
+alias la='ls -a'
+alias ll='ls -lah'
+
+# Git
+alias gc='git clone'
 alias gcm='git commit -m'
 alias gap='git add -p'
 alias gaa='git add -A'
@@ -27,9 +31,19 @@ alias gps='git push'
 alias grhh='git reset --hard HEAD'
 alias clone='code && git clone'
 
+# Utility Shotcuts
+alias alpine='docker run --rm -it alpine sh'
 alias k="kubectl"
 alias kucocuco="kubectl config current-context"
+alias vimrc="\$EDITOR ~/.vimrc"
 
+# Misc
+alias :e='vim'
+alias :q!='exit'
+alias :q='read -q -t 5 -s "Exit? " && exit'
+alias x=':q'
+
+alias please='sudo'
 
 F="sh_aliases"
 alias $F="\$EDITOR ~/.$F"

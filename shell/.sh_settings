@@ -1,9 +1,8 @@
-[ -f $HOME/.reformrc ] && source $HOME/.reformrc
-
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export CODE_PATH="$HOME/Documents/Code"
 
-export GOPATH=$HOME/Documents/Code/go-workspace
+export GOPATH=$CODE_PATH/go-workspace
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin

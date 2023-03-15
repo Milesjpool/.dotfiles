@@ -4,7 +4,6 @@ set -o emacs
 
 alias rezsh='source ~/.zshrc'
 alias zshrc='$EDITOR ~/.zshrc'
-alias x='read -q -t 5 -s "?Exit? " && exit'
 
 # profiler
 #zmodload zsh/zprof
