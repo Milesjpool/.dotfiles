@@ -8,8 +8,14 @@ alias zshrc='$EDITOR ~/.zshrc'
 # profiler
 #zmodload zsh/zprof
 
-ANTIGEN_PATH=~/.dotfiles
-source $ANTIGEN_PATH/antigen/antigen.zsh
+### sources
+source ~/.sh_settings
+source ~/.sh_aliases
+source ~/.sh_functions
+source ~/.sh_lazy_load
+
+### Antigen
+source $DOTFILES_PATH/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 ### oh-my-zsh plugins pre-reqs
@@ -17,12 +23,6 @@ export ZSH_CACHE_DIR=~/.zsh/cache
 mkdir -p $ZSH_CACHE_DIR
 autoload -Uz compinit
 compinit
-
-### sources
-source ~/.sh_settings
-source ~/.sh_aliases
-source ~/.sh_functions
-source ~/.sh_lazy_load
 
 ### history
 HISTFILE=~/.zsh_history

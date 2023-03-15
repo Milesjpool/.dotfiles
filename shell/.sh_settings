@@ -1,6 +1,7 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export CODE_PATH="$HOME/Documents/Code"
+export DOTFILES_PATH="$CODE_PATH/.dotfiles"
 
 export GOPATH=$CODE_PATH/go-workspace
 export GOROOT=/usr/local/opt/go/libexec
