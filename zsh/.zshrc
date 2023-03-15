@@ -35,5 +35,8 @@ setopt incappendhistory
 ### split words into arrays
 setopt shwordsplit
 
+### include dotfiles with asterisk
+setopt -s dotglob
+
 # profiler
 #zprof
