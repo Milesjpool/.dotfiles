@@ -9,8 +9,8 @@ alias x='read -q -t 5 -s "?Exit? " && exit'
 # profiler
 #zmodload zsh/zprof
 
-ANTIGEN_PATH=~/.dotfiles
-source $ANTIGEN_PATH/antigen/antigen.zsh
+ANTIGEN_PATH=~/.dotfiles/antigen
+source $ANTIGEN_PATH/antigen.zsh
 antigen init ~/.antigenrc
 
 ### oh-my-zsh plugins pre-reqs
@@ -53,25 +53,14 @@ kops() {
     command kops "$@"
 }
 
-nvm() {
-  NVM_DIR="$HOME/.nvm"
-  if [[ -d "$NVM_DIR" ]]; then
-    export NVM_DIR
+BREW_DIR="/opt/homebrew/bin"
+[ -d "$BREW_DIR" ] && eval "$($BREW_DIR/brew shellenv)"
 
-    source "${NVM_DIR}/nvm.sh"
-    if [[ -e ~/.nvm/alias/default ]]; then
-      PATH="${PATH}:${HOME}.nvm/versions/node/$(cat ~/.nvm/alias/default)/bin"
-    fi
 
-    nvm "$@"
-  else
-    echo "nvm is not installed" >&2
-    return 1
-  fi
-}
-
-command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
-command -v fnm >/dev/null 2>&1 && eval "$(fnm env)"
+export PATH="$HOME/.pyenv/shims:$PATH"
+[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
+[ -x "$(command -v fnm)" ] && eval "$(fnm env)"
 
 # profiler
 #zprof
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"

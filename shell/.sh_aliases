@@ -1,5 +1,5 @@
 alias ..='cd ..'
-alias ...='cd ..\..'
+alias ...='cd ../..'
 alias ll='ls -al'
 alias :q='exit'
 
@@ -26,6 +26,8 @@ alias gpl='git pull'
 alias gps='git push'
 alias grhh='git reset --hard HEAD'
 alias clone='code && git clone'
+
+alias awsume=". awsume"
 
 alias k="kubectl"
 alias kucocuco="kubectl config current-context"
