@@ -1,7 +1,7 @@
 # Navigation
 
 alias ..='cd ..'
-alias ...='cd ..\..'
+alias ...='cd ../..'
 alias home='cd $HOME'
 alias code='cd $CODE_PATH'
 alias gode="cd $GOPATH"
@@ -32,10 +32,10 @@ alias grhh='git reset --hard HEAD'
 alias clone='code && git clone'
 
 # Utility Shotcuts
-alias alpine='docker run --rm -it alpine sh'
 alias k="kubectl"
 alias kucocuco="kubectl config current-context"
 alias vimrc="\$EDITOR ~/.vimrc"
+alias alpine='docker run --rm -it alpine sh'
 
 # Misc
 alias :e='vim'
