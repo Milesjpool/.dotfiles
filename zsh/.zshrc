@@ -44,4 +44,3 @@ PURE_PROMPT_SYMBOL=👾
 
 # profiler
 #zprof
-export PATH="/usr/local/opt/openssl@3/bin:$PATH"
