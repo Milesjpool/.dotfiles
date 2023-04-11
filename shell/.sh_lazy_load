@@ -1,0 +1,40 @@
+### lazy loading
+
+kubectl() {
+    if ! type __start_kubectl >/dev/null 2>&1; then
+        source <(command kubectl completion zsh)
+    fi
+
+    command kubectl "$@"
+}
+
+kops() {
+    if ! type __start_kops >/dev/null 2>&1; then
+        source <(command kops completion zsh)
+    fi
+
+    command kops "$@"
+}
+
+nvm() {
+  NVM_DIR="$HOME/.nvm"
+  if [[ -d "$NVM_DIR" ]]; then
+    export NVM_DIR
+
+    source "${NVM_DIR}/nvm.sh"
+    if [[ -e ~/.nvm/alias/default ]]; then
+      PATH="${PATH}:${HOME}.nvm/versions/node/$(cat ~/.nvm/alias/default)/bin"
+    fi
+
+    nvm "$@"
+  else
+    echo "nvm is not installed" >&2
+    return 1
+  fi
+}
+
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
+command -v fnm >/dev/null 2>&1 && eval "$(fnm env)"
+
+F="sh_lazy_load"
+alias $F="\$EDITOR ~/.$F"

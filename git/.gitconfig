@@ -1,0 +1,8 @@
+[include]
+    path = .gitconfig.private
+[push]
+	default = simple
+[alias]
+	st = status
+[core]
+	autocrlf = true

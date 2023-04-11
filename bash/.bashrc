@@ -1,7 +1,8 @@
+source ~/.sh_settings
 source ~/.sh_aliases
 source ~/.sh_functions
-source ~/.sh_settings
+source ~/.sh_lazy_load
 
-alias rebash='source ~/.bash_profile'
 alias bashrc='$EDITOR ~/.bashrc'
-alias bash_profile='$EDITOR ~/.bash_profile'
+
+export HISTCONTROL=ignoreboth

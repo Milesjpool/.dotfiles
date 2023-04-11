@@ -1,12 +1,16 @@
+F="sh_settings"
+alias $F="\$EDITOR ~/.$F"
+[ -f $HOME/.$F.private ] && {source $HOME/.$F.private; alias $F.private="\$EDITOR ~/.$F.private"}
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export CODE_PATH="${CODE_PATH:=$HOME/Documents/Code}"
+export DOTFILES_PATH="$CODE_PATH/.dotfiles"
 
-export GOPATH=$HOME/Documents/Code/go-workspace
+export GOPATH=$CODE_PATH/go-workspace
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$HOME/.local/bin
 
-F="sh_settings"
-alias $F="\$EDITOR ~/.$F"
-[ -f $HOME/.$F.private ] && {source $HOME/.$F.private; alias $F.private="\$EDITOR ~/.$F.private"}
+export LSCOLORS=ExFxCxDxBxegedabagacad
