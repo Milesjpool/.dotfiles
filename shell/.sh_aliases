@@ -35,7 +35,6 @@ alias clone='code && git clone'
 alias k="kubectl"
 alias kucocuco="kubectl config current-context"
 alias vimrc="\$EDITOR ~/.vimrc"
-alias awsume=". awsume"
 alias alpine='docker run --rm -it alpine sh'
 
 # Misc
