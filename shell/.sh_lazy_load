@@ -36,5 +36,16 @@ nvm() {
 command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 command -v fnm >/dev/null 2>&1 && eval "$(fnm env)"
 
+brew() {
+  if [[ -f "$BREW_PATH" ]]; then
+    eval "$($BREW_PATH shellenv)"
+
+    command brew "$@"
+  else
+    echo "brew is not installed" >&2
+    return 1
+  fi
+}
+
 F="sh_lazy_load"
 alias $F="\$EDITOR ~/.$F"
