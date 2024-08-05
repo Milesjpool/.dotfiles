@@ -4,5 +4,5 @@
   default = simple
 [alias]
   st = status
-[core]
-  autocrlf = true
+#[core]
+#  autocrlf = false
