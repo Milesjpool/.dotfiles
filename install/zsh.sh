@@ -7,4 +7,4 @@ setopt globdots
 git submodule init
 git submodule update
 
-ln -sv $PWD/zsh/* ~/
+ln -sv $PWD/zsh/* ~
