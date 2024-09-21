@@ -1,5 +1,7 @@
 ### lazy loading
 
+test -f "$BREW_PATH" && eval "$($BREW_PATH shellenv)"
+
 kubectl() {
     if ! type __start_kubectl >/dev/null 2>&1; then
         source <(command kubectl completion zsh)
@@ -33,7 +35,7 @@ nvm() {
   fi
 }
 
-command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init --path)"
 command -v fnm >/dev/null 2>&1 && eval "$(fnm env)"
 
 F="sh_lazy_load"

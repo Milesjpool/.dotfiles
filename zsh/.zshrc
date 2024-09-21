@@ -14,9 +14,6 @@ source ~/.sh_aliases
 source ~/.sh_functions
 source ~/.sh_lazy_load
 
-### Homebrew
-test -f "$BREW_PATH" && eval "$($BREW_PATH shellenv)"
-
 ### Antigen
 source $DOTFILES_PATH/antigen/antigen.zsh
 antigen init ~/.antigenrc
