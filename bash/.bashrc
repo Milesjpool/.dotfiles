@@ -1,3 +1,5 @@
+[ -f ~/.bashrc.private ] && source ~/.bashrc.private
+
 source ~/.sh_settings
 source ~/.sh_aliases
 source ~/.sh_functions
