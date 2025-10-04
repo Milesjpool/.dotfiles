@@ -6,3 +6,5 @@
   st = status
 #[core]
 #  autocrlf = false
+[pull]
+	rebase = true
