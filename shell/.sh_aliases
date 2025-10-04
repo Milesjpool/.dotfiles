@@ -47,4 +47,4 @@ alias please='sudo'
 
 F="sh_aliases"
 alias $F="\$EDITOR ~/.$F"
-[ -f $HOME/.$F.private ] && {source $HOME/.$F.private; alias $F.private="\$EDITOR ~/.$F.private"}
+[ -f "$HOME/.$F.private" ] && { source "$HOME/.$F.private"; alias $F.private="\$EDITOR ~/.$F.private"; }

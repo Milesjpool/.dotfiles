@@ -1,6 +1,6 @@
 F="sh_settings"
 alias $F="\$EDITOR ~/.$F"
-[ -f $HOME/.$F.private ] && {source $HOME/.$F.private; alias $F.private="\$EDITOR ~/.$F.private"}
+[ -f "$HOME/.$F.private" ] && { source "$HOME/.$F.private"; alias $F.private="\$EDITOR ~/.$F.private"; }
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
