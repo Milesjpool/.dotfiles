@@ -3,14 +3,16 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias home='cd $HOME'
-alias code='cd $CODE_PATH'
+alias code='[ -d $CODE_PATH ] ||  mkdir -p $CODE_PATH; cd $CODE_PATH'
 alias gode="cd $GOPATH"
 
-for proj_path in $CODE_PATH/*/; do
-  proj="$(basename "$proj_path")";
-  alias "code/$proj"="cd $CODE_PATH/$proj";
-  alias "vscode/$proj"="vscode $CODE_PATH/$proj";
-done
+if [ -d $CODE_PATH ]; then
+  for proj_path in $CODE_PATH/*/; do
+    proj="$(basename "$proj_path")";
+    alias "code/$proj"="cd $CODE_PATH/$proj";
+    alias "vscode/$proj"="vscode $CODE_PATH/$proj";
+  done
+fi
 
 alias dotfiles='pushd ~/.dotfiles'
 
