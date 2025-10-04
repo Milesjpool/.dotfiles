@@ -2,6 +2,7 @@
   path = .gitconfig.private
 [push]
   default = simple
+	autoSetupRemote = true
 [alias]
   st = status
 #[core]
