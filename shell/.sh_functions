@@ -1,26 +1,26 @@
 function mkcd() { mkdir -p "$1" && cd "$1"; }
 
-function cdto() { cd `which "$1"`/..; }
+function cdto() { cd $(which "$1")/..; }
 
 function +x() { chmod +x $1; }
 
-function csc() { $EDITOR $(which $1) }
+function csc() { $EDITOR $(which $1); }
 
 function glc() {
   (
   code;
   for d in */.git; do
-    dir=$( dirname "$d" )
-    pushd "$dir" > /dev/null
+    dir=$( dirname "$d" );
+    pushd "$dir" > /dev/null;
     if [[ $(git status --porcelain) ]]; then
-      echo "$dir"
+      echo "$dir";
     fi
-    popd > /dev/null
+    popd > /dev/null;
   done
   )
 }
 
-function fpop() { head -n1 "$1"; tail -n +2 "$1" > "$1.tmp"; mv "$1.tmp" "$1" }
+function fpop() { head -n1 "$1"; tail -n +2 "$1" > "$1.tmp"; mv "$1.tmp" "$1"; }
 
 #function each() { f="$1"; v="$2"; shift 2; while read "$v" ; do $@; done < "$f" }
 
@@ -30,6 +30,10 @@ function pd() { if [ -z "$1" ]; then popd; else pushd "$1"; fi }
 
 function glrtp() { kubectl get pods --all-namespaces | grep -e "^a-.*Running.*d$"; }
 
-F="sh_functions"
-alias $F="\$EDITOR ~/.$F"
-[ -f $HOME/.$F.private ] && {source $HOME/.$F.private; alias $F.private="\$EDITOR ~/.$F.private"}
+F="sh_functions";
+alias $F="\$EDITOR ~/.$F";
+if [ -f "$HOME/.$F.private" ]; then
+  source "$HOME/.$F.private";
+  alias $F.private="\$EDITOR ~/.$F.private";
+fi
+
